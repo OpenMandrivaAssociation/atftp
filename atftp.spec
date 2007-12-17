@@ -22,7 +22,6 @@ BuildRequires:	libtermcap-devel
 BuildRequires:	tcp_wrappers-devel
 Requires(pre): rpm-helper
 Provides:	tftp
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 atftp is an advanced client implementation of the TFTP protocol that implements
