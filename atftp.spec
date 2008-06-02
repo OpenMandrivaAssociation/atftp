@@ -74,8 +74,8 @@ service tftp
 	user			= root
 	server			= %{_sbindir}/in.tftpd
 # multicast config
-#	server_args		= --tftpd-timeout 300 --retry-timeout 5 --mcast-port 1758 --mcast-addr 239.239.239.0-255 --maxthread 1000 --verbose=5 %{_localstatedir}/tftpboot
-	server_args		= %{_localstatedir}/tftpboot
+#	server_args		= --tftpd-timeout 300 --retry-timeout 5 --mcast-port 1758 --mcast-addr 239.239.239.0-255 --maxthread 1000 --verbose=5 %{_localstatedir}/lib/tftpboot
+	server_args		= %{_localstatedir}/lib/tftpboot
 	per_source		= 11
 	cps			= 100 2
 	flags			= IPv4
@@ -107,7 +107,7 @@ install -d %{buildroot}%{_var}/run/atftpd
 %{__install} -Dp -m 0644 %{SOURCE2} %{buildroot}/%{_sysconfdir}/sysconfig/atftpd
 %{__install} -Dp -m 0644 %{SOURCE3} %{buildroot}/%{_sysconfdir}/logrotate.d/atftpd
 
-%{__install} -d %{buildroot}/%{_localstatedir}/tftpboot/
+%{__install} -d %{buildroot}/%{_localstatedir}/lib/tftpboot/
 %{__install} -Dp -m0644 tftp.xinetd %{buildroot}%{_sysconfdir}/xinetd.d/tftp
 touch %{buildroot}%{_logdir}/atftpd/atftpd.log
 
@@ -133,7 +133,7 @@ touch %{buildroot}%{_logdir}/atftpd/atftpd.log
 %config(noreplace) %attr(0644,root,root) %{_sysconfdir}/xinetd.d/tftp
 %config(noreplace) %attr(0644,root,root) %{_sysconfdir}/sysconfig/atftpd
 %config(noreplace) %attr(0644,root,root) %{_sysconfdir}/logrotate.d/atftpd
-%dir %{_localstatedir}/tftpboot
+%dir %{_localstatedir}/lib/tftpboot
 %dir %attr(0755,nobody,nogroup) %{_var}/run/atftpd
 %dir %attr(0755,nobody,nogroup) %{_logdir}/atftpd
 %{_sbindir}/atftpd
