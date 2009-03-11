@@ -1,7 +1,7 @@
 Summary:	Advanced Trivial File Transfer Protocol (TFTP) client
 Name:		atftp
 Version:	0.7
-Release:	%mkrel 5
+Release:	%mkrel 6
 License:	GPL
 Group:		System/Servers
 URL:		ftp://ftp.mamalinux.com/pub/atftp/
