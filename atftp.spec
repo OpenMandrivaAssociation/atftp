@@ -1,11 +1,11 @@
 Summary:	Advanced Trivial File Transfer Protocol (TFTP) client
 Name:		atftp
 Version:	0.7
-Release:	%mkrel 7
+Release:	%mkrel 8
 License:	GPL
 Group:		System/Servers
-URL:		ftp://ftp.mamalinux.com/pub/atftp/
-Source0:	ftp://ftp.mamalinux.com/pub/atftp/%{name}-%{version}.tar.gz
+URL:		http://ftp.de.debian.org/debian/pool/main/a/atftp/
+Source0:	%{name}-%{version}.tar.gz
 Source1:	atftpd.init.d
 Source2:	atftpd.sysconfig
 Source3:	atftpd.logrotate
@@ -20,7 +20,7 @@ BuildRequires:	libpcre-devel
 BuildRequires:	libreadline-devel
 BuildRequires:	libtermcap-devel
 BuildRequires:	tcp_wrappers-devel
-Requires(pre): rpm-helper
+Requires(pre):	rpm-helper
 Provides:	tftp
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
