@@ -1,7 +1,7 @@
 Summary:	Advanced Trivial File Transfer Protocol (TFTP) client
 Name:		atftp
 Version:	0.7
-Release:	%mkrel 8
+Release:	%mkrel 9
 License:	GPL
 Group:		System/Servers
 URL:		http://ftp.de.debian.org/debian/pool/main/a/atftp/
