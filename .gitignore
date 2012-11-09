@@ -1,0 +1,4 @@
+atftp-0.7.tar.gz
+atftpd.init.d
+atftpd.logrotate
+atftpd.sysconfig

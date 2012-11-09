@@ -1,0 +1,5 @@
+sources:
+  "atftp-0.7.tar.gz:"	83726e552ca10a164f1a7b344b0c51ca33423fe9
+  "atftpd.init.d:"	dc1f680b3800d1f34646f7829cb2625505e70aa2
+  "atftpd.logrotate:"	99543f1115a02181f9a28b6243534931de28c076
+  "atftpd.sysconfig:"	387d520386782d87539c0f693bb26458c2a26fa6
