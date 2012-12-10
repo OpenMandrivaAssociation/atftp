@@ -1,0 +1,26 @@
+## Path:    Network/FTP/Atftpd
+## Description: ATFTP Configuration
+## Type:    string
+## Default: "--daemon "
+#
+# atftpd options
+#
+ATFTPD_OPTIONS="--daemon $ATFTPD_OPTIONS"
+ATFTPD_OPTIONS="$ATFTPD_OPTIONS --pidfile /var/run/atftpd/atftpd.pid"
+ATFTPD_OPTIONS="$ATFTPD_OPTIONS --logfile /var/log/atftpd/atftpd.log"
+
+## Type:    yesno
+## Default: no
+#
+# Use inetd instead of daemon
+#
+ATFTPD_USE_INETD="no"
+
+## Type:    string
+## Default: "/var/lib/tftpboot"
+#
+#  TFTP directory must be a world readable/writable directory.
+#  By default /tftpboot is assumed.
+#
+ATFTPD_DIRECTORY="/var/lib/tftpboot"
+

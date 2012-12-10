@@ -1,0 +1,14 @@
+/var/log/atftpd.log {
+   daily
+   rotate 5
+   compress
+   copytruncate
+   notifempty
+   missingok
+    postrotate
+        # only restart if atftpd is really running
+        if test -n "`ps acx|grep atftpd`"; then
+                /sbin/service atftpd restart
+        fi
+    endscript
+}

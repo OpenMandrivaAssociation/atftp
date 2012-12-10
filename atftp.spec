@@ -1,7 +1,7 @@
 Summary:	Advanced Trivial File Transfer Protocol (TFTP) client
 Name:		atftp
 Version:	0.7
-Release:	%mkrel 10
+Release:	%mkrel 9
 License:	GPL
 Group:		System/Servers
 URL:		http://ftp.de.debian.org/debian/pool/main/a/atftp/
@@ -15,14 +15,13 @@ Patch3:		atftp-CLK_TCK.diff
 Patch4:		atftp-0.7_compiler_warnings.patch
 Patch5:		atftp-0.7_thread_crash.patch
 Patch6:		atftp-0.7_sol_ip.patch
-BuildRequires:	libncurses-devel
-BuildRequires:	libpcre-devel
+BuildRequires:	pkgconfig(ncurses)
+BuildRequires:	pkgconfig(libpcre)
 BuildRequires:	libreadline-devel
-BuildRequires:	libtermcap-devel
+BuildRequires:	termcap-devel
 BuildRequires:	tcp_wrappers-devel
 Requires(pre):	rpm-helper
 Provides:	tftp
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 atftp is an advanced client implementation of the TFTP protocol that implements
@@ -116,9 +115,6 @@ touch %{buildroot}%{_logdir}/atftpd/atftpd.log
 
 %preun -n atftp-server
 %_preun_service atftpd
-
-%clean
-[ -n "%{buildroot}" -a "%{buildroot}" != / ] && rm -rf %{buildroot}
 
 %files
 %defattr(-, root, root, 0755)
