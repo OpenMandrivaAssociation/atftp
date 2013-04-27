@@ -9,12 +9,7 @@ Source0:	%{name}-%{version}.tar.gz
 Source1:	atftpd.init.d
 Source2:	atftpd.sysconfig
 Source3:	atftpd.logrotate
-Patch1:		atftp-0.7-inlines.patch
-Patch2:		atftp-0.7.diff
 Patch3:		atftp-CLK_TCK.diff
-Patch4:		atftp-0.7_compiler_warnings.patch
-Patch5:		atftp-0.7_thread_crash.patch
-Patch6:		atftp-0.7_sol_ip.patch
 BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	pkgconfig(libpcre)
 BuildRequires:	readline-devel
@@ -48,12 +43,7 @@ lacks IPv6 support.
 %prep
 
 %setup -q
-%patch1 -p1
-%patch2
 %patch3
-%patch4
-%patch5
-%patch6
 
 ### FIXME: Change location of pcre.h to pcre/pcre.h (Please fix upstream)
 if [ -r %{_includedir}/pcre/pcre.h ]; then
