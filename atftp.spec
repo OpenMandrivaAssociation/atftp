@@ -1,7 +1,7 @@
 Summary:	Advanced Trivial File Transfer Protocol (TFTP) client
 Name:		atftp
 Version:	0.7.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		System/Servers
 URL:		http://sourceforge.net/projects/atftp/
