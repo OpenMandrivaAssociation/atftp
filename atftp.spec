@@ -10,6 +10,11 @@ Source1:	atftpd.init.d
 Source2:	atftpd.sysconfig
 Source3:	atftpd.logrotate
 Patch3:		atftp-CLK_TCK.diff
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	pkgconfig(libpcre)
 BuildRequires:	readline-devel
